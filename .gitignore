@@ -1,0 +1,6 @@
+/archive/
+/dist/
+/.dist.foliospace-build-output
+/.docs.foliospace-build-output
+__pycache__/
+*.py[cod]
