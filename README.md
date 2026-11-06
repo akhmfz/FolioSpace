@@ -19,7 +19,7 @@ All profile names, institutions, employers, projects, and contact details are fi
 Build and validate a clean deployable copy with `python3 build.py`. Serve the generated `dist/` directory locally with `python3 -m http.server 4174 --directory dist`, then visit `http://127.0.0.1:4174/`.
 
 ## GitHub Pages
-Prepare the public site in `docs/` with `python3 build.py --output docs`, push the repository, then select **Settings → Pages → Deploy from a branch → `main` / `/docs`**. The source tree and archive are not published by that setting.
+Prepare the public site in `docs/` with `python3 build.py --output docs`, push the repository, then select **Settings → Pages → Deploy from a branch → `main` / `/docs`**. `CNAME` binds `foliospace.akhmfz.my.id`; its DNS CNAME should point to `akhmfz.github.io`. The source tree and archive are not published by that setting.
 
 ## Configuration
 Edit `assets/js/config.js` to update the WhatsApp number and social profile URL.

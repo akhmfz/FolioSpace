@@ -69,6 +69,7 @@ def main():
     try:
         for page in PAGES:
             shutil.copy2(ROOT / page, output / page)
+        shutil.copy2(ROOT / "CNAME", output / "CNAME")
         for folder in ("assets", "demos"):
             shutil.copytree(ROOT / folder, output / folder)
         marker.write_text("FolioSpace build output\n", encoding="utf-8")
