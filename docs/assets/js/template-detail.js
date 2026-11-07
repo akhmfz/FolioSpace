@@ -6,6 +6,7 @@
   document.title = `${item.name} — FolioSpace`;
   document.querySelector('meta[property="og:title"]')?.setAttribute("content", document.title);
   document.querySelector('meta[property="og:description"]')?.setAttribute("content", item.description);
+  document.querySelector('link[rel="canonical"]')?.setAttribute("href", `https://foliospace.akhmfz.my.id/template.html?slug=${encodeURIComponent(item.slug)}`);
   const set = (selector, value) => { const el = document.querySelector(selector); if (el) el.textContent = value; };
   set("[data-detail-name]", item.name);
   set("[data-detail-category]", item.label);

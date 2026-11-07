@@ -1,5 +1,7 @@
 # FolioSpace — Reference Research Notes
 
+> Catatan baris 3–63 merekam riset baseline v3/v4. Follow-up untuk dua template v5 dan lisensi sumber yang sudah diverifikasi ada di bagian akhir.
+
 ## Scope and evidence
 
 This review uses the user-provided `Pasted text.txt` reference list and the current FolioSpace v3 source. The pasted list contains **118 portfolio entries** in the copied section, not the 200+ entries mentioned in the pasted text's introduction. The source categories are: Professional 66, Creative 30, Minimalist 18, Academic 4.
@@ -61,3 +63,7 @@ When network access is available:
 3. Verify the repository license and required attribution.
 4. Record which specific layout patterns are worth learning from.
 5. Compare each pattern with the v4 demo and make a deliberate adaptation only where it improves the result.
+
+## Follow-up — v5/v6 source verification (2026-11-07)
+
+The original CSV lists GitHub handles rather than exact repositories, so exact repos were resolved for the eight new templates. Seven MIT-licensed repositories were checked; some repos are related author projects rather than the exact live site named in the CSV, and that distinction is called out in the adaptation log. Their screenshots/docs were observed, but FolioSpace demos use original copy, HTML, CSS, artwork, and fictional personas; no upstream source code or media were reused. Exact revisions, license notices, observed cues, and modifications are recorded in `references/open-source-adaptations.md`.

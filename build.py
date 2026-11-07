@@ -4,6 +4,7 @@
 from html.parser import HTMLParser
 from pathlib import Path
 import argparse
+import re
 import shutil
 import subprocess
 
@@ -28,9 +29,14 @@ class PageRefs(HTMLParser):
 
 
 def validate(site):
-    pages = [*site.glob("*.html"), *site.glob("demos/*/*.html")]
-    if len(pages) != 7:
-        raise SystemExit(f"Expected 7 HTML pages, found {len(pages)}")
+    pages = [*(site / page for page in PAGES), *site.glob("demos/*/index.html")]
+    if any(not page.is_file() for page in pages):
+        raise SystemExit("A required public page is missing")
+    listed = set(re.findall(r'demo:\s*"([^"]+)"', (site / "assets/js/data.js").read_text(encoding="utf-8")))
+    actual = {page.relative_to(site).as_posix() for page in pages if page.parent.name != site.name}
+    actual = {ref for ref in actual if ref.startswith("demos/")}
+    if listed != actual:
+        raise SystemExit(f"Template data and demo pages differ: data={sorted(listed)}, pages={sorted(actual)}")
     for page in pages:
         parser = PageRefs()
         parser.feed(page.read_text(encoding="utf-8"))
