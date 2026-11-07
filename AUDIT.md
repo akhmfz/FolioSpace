@@ -34,6 +34,6 @@ FolioSpace adalah situs statis HTML/CSS/JavaScript untuk katalog layanan website
 
 - Tidak ada backend yang diaudit atau dibuat; situs hanya mengarahkan calon klien ke WhatsApp.
 - Google Fonts masih opsional dan memerlukan internet agar font merek tampil; sistem font fallback bekerja offline.
-- Domain dan HTTPS GitHub Pages telah dikonfigurasi; hasil build terbaru harus dipush agar perubahan tampil live. Security headers, 404 hosting, Safari/Firefox, dan screen reader nyata belum diuji.
+- Domain dan HTTPS GitHub Pages untuk v6 sudah diverifikasi live (HTTP 200 pada halaman utama, katalog, detail, dan enam demo tambahan). Security headers, 404 hosting, Safari/Firefox, dan screen reader nyata belum diuji.
 - Belum diuji di Safari/Firefox, perangkat fisik, atau screen reader nyata. Pemeriksaan kontras otomatis berbasis warna computed, bukan pengganti uji aksesibilitas manual.
 - Konten/demo tetap contoh fiksi; ganti data dan konfigurasi kontak sebelum dipakai sebagai situs produksi.
