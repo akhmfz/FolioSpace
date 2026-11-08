@@ -28,3 +28,21 @@ GitHub repositories and MIT license files were verified for the eight new exampl
 - Run `python3 build.py` and `python3 build.py --output docs`.
 - Test all twelve catalog cards and category counts (3 each).
 - Check all twelve detail/demo routes at 320, 390, 768, 1024, and 1440px; test filter/resize after render, keyboard access, contrast, local links, and console errors.
+
+## Copy and layout pass (2026-11-08)
+
+The homepage was rebuilt as a catalog-first page:
+
+- Removed the tilted mockups, floating badge, phone mockup, trust strip, and duplicate showcase/quote blocks.
+- The hero now states what the catalog is and links to one full demo; the remaining page covers content preparation, process, and FAQ.
+- Brand lines such as "Your journey, your space" were replaced with service facts; footer notes now disclose that demo profiles are fictional.
+
+The twelve demos were revised where the layout was the problem, not only the copy:
+
+- Technical and academic samples (Index, Notes Garden, Open Source, Research Garden, Lecturer) use compact reading columns, full-width project/course rows, and open note entries instead of promotional cards and decorative badges.
+- Original Editorial, Professional, Academic, Developer, and Storyboard samples use smaller, left-aligned headings and denser section spacing.
+- Metaphor headlines ("Words for the next clear step", "Two problems, made legible") were replaced with section names readers can scan.
+- Invented note counts ("3 notes") and decorative performance charts were removed.
+- Italic accent treatment is now reserved for the creative samples; other pages use the same typeface and color for headings and emphasis.
+
+Shared layout overrides live in `assets/css/catalog.css` and `assets/css/demos/portfolio-layouts.css`.

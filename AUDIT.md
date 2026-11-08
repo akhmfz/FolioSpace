@@ -22,6 +22,7 @@ FolioSpace adalah situs statis HTML/CSS/JavaScript untuk katalog layanan website
 ## Verifikasi
 
 - Build selesai: `python3 build.py` → `dist/` (15 halaman; tanpa `archive/`, `references/`, atau dokumen proyek).
+- Revisi tampilan (2026-11-08): homepage jadi katalog; lima demo teknis/akademik memakai kolom baca dan daftar penuh, bukan kartu promosi; heading metafora dan angka catatan fiktif dihapus.
 - Browser automation: 130 kombinasi route/ukuran pada 320, 390, 768, 1024, dan 1440 px; tidak ada overflow horizontal, missing anchor, atau uncaught JS error.
 - Empat kategori masing-masing memiliki tiga template; kelima filter menjaga preview tetap fit dan memilih satu state.
 - Menu keyboard: Enter membuka, Escape menutup, fokus kembali ke tombol; skip link menerima fokus pertama.

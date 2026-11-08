@@ -1,0 +1,23 @@
+/* Shared marketing pages use a compact catalog hierarchy, not demo typography. */
+.section-pad{padding-block:64px}
+.hero{padding-block:64px}
+.hero h1,.page-hero h1{font-size:clamp(36px,4.5vw,58px);letter-spacing:-.045em;line-height:1.12}
+.section-heading h2,.services-intro h2,.process-section h2,.faq-layout h2,.detail-info-grid h2{font-size:clamp(28px,3vw,40px);letter-spacing:-.035em}
+.page-hero h1 em,.section-heading h2 em,.faq-layout h2 em,.detail-heading h1 em,.detail-info-grid h2 em{font:inherit;letter-spacing:inherit;color:inherit}
+.hero-visual{min-height:0;display:flex;flex-direction:column;align-items:stretch;gap:16px;margin:0}
+.hero-visual>.text-link{align-self:flex-start}
+.hero-desktop{width:100%;transform:none;box-shadow:none;border-radius:0;padding:0}
+.hero-note{margin-top:24px;font-size:12px;line-height:1.6}
+.section-templates{border-top:1px solid var(--line)}
+.feature-item{grid-template-columns:32px 1fr}
+.process-card{min-height:0}
+.process-card h3{margin-top:16px}
+.final-cta{padding-block:48px;text-align:left}
+.final-cta-inner{align-items:flex-start}
+.final-cta h2{font-size:32px;letter-spacing:-1px;margin-top:0}
+.footer-note{font:12px/1.6 var(--sans)}
+.button:hover{transform:none}
+.page-hero{padding-bottom:24px}
+.templates-page-section{padding-top:24px}
+.detail-heading h1{font-size:clamp(36px,5vw,56px);letter-spacing:-.04em}
+@media(max-width:680px){.section-pad{padding-block:44px}.hero-grid{gap:28px}.hero h1{font-size:40px}.hero-lede{font-size:16px}.hero-visual{min-height:0}.final-cta h2{font-size:28px}.process-card{min-height:0}.page-hero h1{font-size:38px}}
