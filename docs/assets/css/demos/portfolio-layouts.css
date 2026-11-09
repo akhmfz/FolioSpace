@@ -1,4 +1,8 @@
 /* Role-specific reading hierarchy for the original portfolio examples. */
+body{font-size:15px;font-synthesis:none}
+:where(h1,h2,h3,p){text-wrap:pretty}
+header nav a{display:inline-flex;min-height:44px;align-items:center}
+:where(a,button,[tabindex]):focus-visible{outline:2px solid currentColor;outline-offset:3px}
 .minimal-page .m-wrap{max-width:960px}
 .minimal-page .m-intro{grid-template-columns:1fr 180px;gap:48px;padding-block:48px}
 .minimal-page .m-intro h1{font-size:clamp(36px,5vw,54px);line-height:1.15;letter-spacing:-.04em}
@@ -8,6 +12,33 @@
 .minimal-page .m-work,.minimal-page .m-about{padding-block:44px}
 .minimal-page .m-contact{padding-block:32px}
 .minimal-page .m-contact h2{font-size:28px}
+.minimal-page .m-intro{padding-top:56px;padding-bottom:42px}
+.minimal-page .m-intro h1{font-size:clamp(38px,4.8vw,58px)}
+.minimal-page .m-intro h1 br{display:none}
+.minimal-page .m-timeline{display:grid;grid-template-columns:.7fr 1.3fr;gap:36px;padding:30px 0;border-block:1px solid var(--line)}
+.minimal-page .m-timeline-heading p{max-width:210px;color:var(--muted);font:italic 16px/1.45 var(--serif)}
+.minimal-page .m-timeline-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.minimal-page .m-timeline-list li{display:grid;grid-template-columns:116px 1fr;gap:18px;padding:15px 0;border-bottom:1px solid var(--line)}
+.minimal-page .m-timeline-list time{font-size:9px;letter-spacing:.08em;color:var(--muted)}
+.minimal-page .m-timeline-list h2{font:600 14px/1.4 var(--sans);margin:0 0 3px}
+.minimal-page .m-timeline-list p{margin:0;color:var(--muted);font-size:12px;line-height:1.55}
+.minimal-page .m-work{padding-block:48px}
+.minimal-page .m-work-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;border:0}
+.minimal-page .m-work-row{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:10px;border:1px solid var(--line);background:#fbfaf6}
+.minimal-page .m-work-number{display:none}
+.minimal-page .m-art{order:-1;width:100%;height:150px;margin-bottom:15px}
+.minimal-page .m-art-learning strong{font-size:30px;margin-top:18px}
+.minimal-page .m-work-copy h3{font-size:20px}
+.minimal-page .m-work-copy p{font-size:12px;line-height:1.6}
+.minimal-page .m-tags{gap:5px}
+.minimal-page .m-tags span{font-size:8px;padding:2px 7px}
+.minimal-page .m-writing{padding-block:38px;grid-template-columns:.7fr 1.3fr;gap:36px}
+.minimal-page .m-writing-head p{font-size:14px}
+.minimal-page .m-writing-list .m-writing-item{grid-template-columns:112px 1fr 38px;padding:13px 0}
+.minimal-page .m-writing-list strong{font-size:16px}
+.minimal-page .m-about{padding-block:42px;gap:48px}
+.minimal-page .m-contact{padding-block:34px}
+.minimal-page .m-source-credit{font-size:9px;text-transform:none;letter-spacing:0}
 .pro-page .p-hero{padding-block:44px;grid-template-columns:1fr 200px;gap:40px}
 .pro-page .p-hero h1{font-size:clamp(32px,4vw,48px);line-height:1.18;letter-spacing:-.035em}
 .pro-page .p-hero h1 em{font:inherit;color:inherit}
@@ -45,7 +76,7 @@
 .m-frame{border-radius:0;box-shadow:none}
 .m-frame .m-browser-bar{display:none}
 .m-frame .m-hero{padding-block:36px}
-.m-frame .m-hero h1{font-size:clamp(40px,6vw,76px)}
+.m-frame .m-hero h1{font-size:clamp(40px,5vw,60px);line-height:1.04;letter-spacing:-.03em}
 .m-frame .m-contact h2{font-size:36px}
 .s-hero-grid{padding-top:36px}
 .s-hero h1{font-size:clamp(42px,6vw,68px)}
@@ -57,11 +88,27 @@ section.s-contact{display:block;padding-block:32px}
 .s-contact h2{font-size:28px;margin:12px 0}
 @media(max-width:700px){
   .minimal-page .m-intro,.pro-page .p-hero,.academic-page .a-hero{grid-template-columns:1fr;gap:24px;padding-block:32px}
+  .minimal-page .m-timeline{grid-template-columns:1fr;gap:10px}
+  .minimal-page .m-work-list{grid-template-columns:1fr}
+  .minimal-page .m-art{height:190px}
+  .minimal-page .m-writing{grid-template-columns:1fr;gap:10px}
+  .minimal-page .m-writing-list .m-writing-item{grid-template-columns:86px 1fr 35px;gap:8px}
   .minimal-page .m-portrait,.pro-page .p-profile,.academic-page .a-profile{max-width:180px}
   .s-sequence-list article{grid-template-columns:1fr}
   .s-sequence-art{height:180px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Motion project tiles adapt Israel Mitolu's offset color-plane treatment. */
+.m-project{position:relative;padding:0 10px 12px 0}
+.m-project::before{content:"";position:absolute;inset:10px 0 0 10px;background:var(--project-plane);z-index:0}
+.m-project-art,.m-project-meta{position:relative;z-index:1}
+.m-project-orbit{--project-plane:#ff795e}
+.m-project-frequency{--project-plane:#34a3a3}
+.m-project-afterglow{--project-plane:#6ff2ce}
+.m-project-art{border-color:var(--paper)}
+.m-project-meta{margin-top:0;padding:14px 12px 10px;background:var(--ink);border:1px solid var(--line)}
+@media(max-width:760px){.m-projects{grid-template-columns:1fr}.m-project:nth-child(2){margin-top:0}.m-project-art{height:215px}}
 
 /* A working index: project records lead, with a narrow reading measure. */
 .i-wrap{max-width:820px}

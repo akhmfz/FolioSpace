@@ -1,15 +1,15 @@
-# FolioSpace v6 — twelve options, four categories
+# FolioSpace v6 — twelve examples, four categories
 
 ## Template expansion
 
-The catalog now has three options in each category:
+The catalog now has three examples in each category:
 
 - **Minimalist:** Alex's editorial profile, Eka's editing index, and Lintang's linked teaching notes.
 - **Professional:** Jordan's operations case studies, Asha's engineering timeline, and Faris's repository-first profile.
 - **Creative:** Sam's visual identity cases, Rafi's motion studies, and Mika's storyboard sequences.
 - **Academic:** Maya's faculty profile, Sari's research notes, and Nabila's course-first lecturer profile.
 
-The catalog filters by category; each card opens its own demo and detail page. Six designs are also previewed on the homepage.
+The catalog filters by category; each card opens its own demo and detail page. Six examples are also previewed on the homepage.
 
 ## Copy and sample-content cleanup
 
@@ -44,5 +44,18 @@ The twelve demos were revised where the layout was the problem, not only the cop
 - Metaphor headlines ("Words for the next clear step", "Two problems, made legible") were replaced with section names readers can scan.
 - Invented note counts ("3 notes") and decorative performance charts were removed.
 - Italic accent treatment is now reserved for the creative samples; other pages use the same typeface and color for headings and emphasis.
+
+## Source-led refinement (2026-11-08)
+
+- **The Minimalist / Alex Morgan** now follows a more useful editorial homepage sequence: short profile, dated background timeline, recent notes, then selected projects. The structure was studied from Tania Rascia's current site and exact MIT repo; the page content and code remain FolioSpace's.
+- **The Motion Designer / Rafi Santoso** now gives each project a separate offset color plane, adapted from the project-card treatment in Israel Mitolu's MIT portfolio repo. The sample artwork and implementation remain original.
+- Both templates include a small footer credit. Exact source revisions and license metadata are recorded in `references/open-source-adaptations.md`.
+
+## FolioSpace UI standard (2026-11-09)
+
+- Renamed visitor-facing “Templates” to “Examples”; existing HTML routes remain unchanged. Catalog and detail pages state that the samples are not downloadable themes.
+- Shared marketing pages use white surfaces, Archivo headings, DM Sans body text, one spacing/type scale, 44px control targets, and visible focus states.
+- Removed repeated marketing eyebrows, duplicate footer notes, and technical-stack footer copy. Portfolio examples keep their own visual direction while sharing focus-visible, reduced-motion, and responsive basics.
+- See `DESIGN_SYSTEM.md` for the standard used in future changes.
 
 Shared layout overrides live in `assets/css/catalog.css` and `assets/css/demos/portfolio-layouts.css`.
